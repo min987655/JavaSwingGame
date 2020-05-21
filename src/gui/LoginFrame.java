@@ -73,8 +73,8 @@ public class LoginFrame extends JFrame {
 //		pLogin = new JPanel();
 //		pLogin.setBackground(Color.WHITE);
 
-		btID = new JButton(new ImageIcon("src/images/tbID.png"));
-		btPW = new JButton(new ImageIcon("src/images/tbPw.png"));
+//		btID = new JButton(new ImageIcon("src/images/tbID.png"));
+//		btPW = new JButton(new ImageIcon("src/images/tbPw.png"));
 		btSign = new JButton(new ImageIcon("src/images/tbSignin.png"));
 		btLogin = new JButton(new ImageIcon("src/images/tbLogin.png"));
 
@@ -105,19 +105,19 @@ public class LoginFrame extends JFrame {
 		tfID.setBounds(38, 177, 285, 43);
 		Border borderLine1 = BorderFactory.createLineBorder(Color.BLACK, 3);
 		tfID.setBorder(borderLine1);
-		btID.setBounds(38, 145, 89, 27);
+//		btID.setBounds(38, 145, 89, 27);
 		tfpw.setBounds(38, 269, 285, 43);
 		Border borderLine = BorderFactory.createLineBorder(Color.BLACK, 3);
 		tfpw.setBorder(borderLine);
-		btPW.setBounds(38, 236, 100, 27);
+//		btPW.setBounds(38, 236, 100, 27);
 		tfpw.setColumns(10);
 		btSign.setBounds(49, 350, 124, 41);
 		btLogin.setBounds(189, 350, 124, 41);
 
 		// 4. 패널에 컴포넌트 추가
-		pLogin.add(btID);
+//		pLogin.add(btID);
 		pLogin.add(tfID);
-		pLogin.add(btPW);
+//		pLogin.add(btPW);
 		pLogin.add(tfpw);
 		pLogin.add(btSign);
 		pLogin.add(btLogin);

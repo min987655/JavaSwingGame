@@ -70,9 +70,9 @@ public class SigninFame extends JFrame {
 //		Login = new JPanel();
 //		Login.setBackground(Color.WHITE);
 
-		btSID = new JButton(new ImageIcon("src/images/tbID.png"));
+//		btSID = new JButton(new ImageIcon("src/images/tbID.png"));
 		btIdCheck = new JButton(new ImageIcon("src/images/tbCheck.png"));
-		btSPW = new JButton(new ImageIcon("src/images/tbPw.png"));
+//		btSPW = new JButton(new ImageIcon("src/images/tbPw.png"));
 		btSign = new JButton(new ImageIcon("src/images/tbSignin.png"));
 		btCancel = new JButton(new ImageIcon("src/images/tbCancel.png"));
 
@@ -99,13 +99,13 @@ public class SigninFame extends JFrame {
 		Login.setLayout(null);
 
 		// 3. 디자인
-		btSID.setBounds(38, 113, 89, 27);
-		tfSid.setBounds(38, 142, 178, 41);
+//		btSID.setBounds(38, 113, 89, 27);
+		tfSid.setBounds(36, 132, 178, 41);
 		tfSid.setColumns(10);
 		Border borderLine = BorderFactory.createLineBorder(Color.BLACK, 3);
 		tfSid.setBorder(borderLine);
-		btIdCheck.setBounds(230, 143, 98, 41);
-		btSPW.setBounds(37, 200, 100, 27);
+		btIdCheck.setBounds(228, 133, 98, 41);
+//		btSPW.setBounds(37, 200, 100, 27);
 		tfSpw.setBounds(38, 229, 290, 41);
 		Border borderLine1 = BorderFactory.createLineBorder(Color.BLACK, 3);
 		tfSpw.setBorder(borderLine1);
@@ -114,10 +114,10 @@ public class SigninFame extends JFrame {
 		btCancel.setBounds(193, 335, 124, 41);
 
 		// 4. 패널에 컴포넌트 추가
-		Login.add(btSID);
+//		Login.add(btSID);
 		Login.add(tfSid);
 		Login.add(btIdCheck);
-		Login.add(btSPW);
+//		Login.add(btSPW);
 		Login.add(tfSpw);
 		Login.add(btSign);
 		Login.add(btCancel);

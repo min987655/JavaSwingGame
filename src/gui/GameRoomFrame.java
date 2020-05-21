@@ -36,7 +36,7 @@ public class GameRoomFrame extends JFrame {
 
 	private GameRoomFrame gameroomFrame = this;
 	public JTextField tfCard, tfChat;
-	public JButton btEnter, btCard, btGstart, btBlack, btRed, btBlue, btGreen, btYellow, btEraser, btAlldel;
+	public JButton btEnter, btCard, btGstart, btBlack, btRed, btBlue, btGreen, btYellow, btEraser, btAlldel, btBar;
 	public JTextArea taChat, taUserList;
 	public JLabel LuserList;
 	public MainClient mainClient;
@@ -75,6 +75,7 @@ public class GameRoomFrame extends JFrame {
 	// 객체생성
 	public void initObject() {
 		mainClient = new MainClient(gameroomFrame);
+		btBar = new JButton(new ImageIcon("src/images/grBar.png"));
 		btCard = new JButton(new ImageIcon("src/images/grQuiz.png"));
 		btGstart = new JButton(new ImageIcon("src/images/grGS.png"));
 		tfCard = new JTextField();
@@ -104,33 +105,33 @@ public class GameRoomFrame extends JFrame {
 	public void initDesign() {
 		// 1. 기본세팅
 		setTitle("Game Room");
-		setBounds(100, 100, 962, 738);
+		setBounds(100, 100, 962, 787);
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		getContentPane().setBackground(new Color(211, 211, 211));
 
 		// 2. 패널세팅
-		btCard.setBounds(36, 46, 112, 48);
-		tfCard.setBounds(160, 46, 401, 47);
+		btCard.setBounds(36, 66, 112, 48);
+		tfCard.setBounds(160, 66, 401, 47);
 		tfCard.setColumns(10);
 		tfCard.setEnabled(false);
 		tfCard.setDisabledTextColor(Color.BLACK);
 		Border borderLine = BorderFactory.createLineBorder(Color.BLACK, 3);
 		tfCard.setBorder(borderLine);
-		btGstart.setBounds(580, 46, 323, 48);
-		LuserList.setBounds(578, 106, 320, 40);
-		taUserList.setBounds(580, 157, 323, 92);
+		btGstart.setBounds(580, 66, 323, 48);
+		LuserList.setBounds(578, 115, 320, 40);
+		taUserList.setBounds(580, 177, 323, 92);
 		taUserList.setEnabled(false);
 		taUserList.setBorder(borderLine);
 		taUserList.setDisabledTextColor(Color.BLACK);
 		
 		JScrollPane chatScroll = new JScrollPane();
-		chatScroll.setBounds(583, 264, 316, 363);
-		tfChat.setBounds(582, 637, 243, 43);
+		chatScroll.setBounds(584, 275, 316, 363);
+		tfChat.setBounds(582, 657, 243, 43);
 		tfChat.setColumns(10);
 		tfChat.setBorder(borderLine);
-		btEnter.setBounds(831, 636, 73, 44);
+		btEnter.setBounds(831, 656, 73, 44);
 		btBlack.setBounds(18, 521, 54, 35);
 		btBlack.setPreferredSize(new Dimension(40, 25));
 		btRed.setBounds(77, 521, 54, 35);
@@ -148,7 +149,7 @@ public class GameRoomFrame extends JFrame {
 		PDrawing.setBounds(15, 100, 474, 403);
 //		PDrawing.setBorder(borderLine);
 		Canvas.setLayout(null);
-		Canvas.setBounds(40, 106, 521, 574);
+		Canvas.setBounds(40, 126, 521, 574);
 		Canvas.setBorder(borderLine);
 		Canvas.setBackground(Color.WHITE);
 		
@@ -182,13 +183,17 @@ public class GameRoomFrame extends JFrame {
 		laUsername.setBounds(581, 137, 57, 15);
 		getContentPane().add(laUsername);
 		taChat = new JTextArea();
-		taChat.setBounds(580, 261, 323, 369);
+		taChat.setBounds(580, 272, 323, 369);
 		getContentPane().add(taChat);
 		taChat.setEditable(false);
 		taChat.setTabSize(10);
 		taChat.setEnabled(false);
 		taChat.setBorder(borderLine);
 		taChat.setDisabledTextColor(Color.BLACK);
+		btBar.setBounds(-1, 1, 944, 40);
+//		btBar.setEnabled(false);
+		btBar.setBorder(borderLine);
+		getContentPane().add(btBar);
 	}
 
 	// 리스너 등록
