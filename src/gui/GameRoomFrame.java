@@ -108,7 +108,7 @@ public class GameRoomFrame extends JFrame {
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
-		getContentPane().setBackground(Color.WHITE);
+		getContentPane().setBackground(new Color(211, 211, 211));
 
 		// 2. 패널세팅
 		btCard.setBounds(36, 46, 112, 48);
